@@ -1,25 +1,12 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 export const SearchBar: React.FC = () => {
   return (
-    <div
-      className='
-      max-w-80
-      bg-slate-200	
-      rounded-2xl 
-      max-h-7
-      flex 
-     
-      justify-center
-      '
-    >
-      <MagnifyingGlassIcon className='w-4 h-4' />
+    <div className='relative w-full max-w-52 rounded-2xl bg-slate-200 py-2 md:max-w-60'>
+      <MagnifyingGlassIcon className='absolute left-3 top-2 h-4 w-4 md:top-2.5' />
       <input
         type='text'
         placeholder="You're looking for something?"
-        className='
-        flex
-        bg-transparent
-        '
+        className='flex w-full bg-transparent pl-8 text-xs md:text-sm'
       />
     </div>
   );
