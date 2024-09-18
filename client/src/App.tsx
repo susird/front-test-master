@@ -4,10 +4,14 @@ import { ImageList } from './components/ImageList/ImageList';
 
 function App() {
   return (
-    <>
-      <Header />
-      <ImageList />
-    </>
+    <div className='flex h-screen flex-col bg-slate-100'>
+      <>
+        <Header />
+        <main className='flex w-full justify-center bg-slate-100'>
+          <ImageList />
+        </main>
+      </>
+    </div>
   );
 }
 

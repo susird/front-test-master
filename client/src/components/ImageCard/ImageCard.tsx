@@ -1,3 +1,6 @@
+import { ArrowPathIcon } from '@heroicons/react/24/outline';
+import { HandThumbUpIcon } from '@heroicons/react/24/solid';
+
 type ImageCardProps = {
   imageUrl: string;
   title: string;
@@ -16,20 +19,35 @@ export const ImageCard: React.FC<ImageCardProps> = ({
   liked,
 }) => {
   return (
-    <div className='p-8'>
+    <div className='flex max-h-[520px] flex-col bg-white'>
       <img
         id={id}
         src={imageUrl}
         alt={title}
-        className='h-full w-full max-h-80 max-w-sm border border-b-0 border-solid border-slate-200'
+        className='h-full max-h-80 w-full border border-b-0 border-solid border-slate-200 object-cover'
       />
-      <div className='bg-white flex flex-col items-center p-4 border border-b-0 border-solid border-slate-200'>
-        <h1>COLLECTION</h1>
-        <p className='text-slate-200'>by underground</p>
-      </div>
-      <div className='bg-white flex justify-between divide-x divide-slate-200 text-center border border-solid border-slate-200 '>
-        <button className='flex-1'>{liked ? 'Unlike' : 'Like'}</button>
-        <p className='flex-1 '>{likesCount}</p>
+      <div className='flex flex-col divide-y border border-solid border-slate-200'>
+        <div className='flex h-full max-h-24 w-full flex-col items-center p-4'>
+          <h1>COLLECTION</h1>
+          <p className='md:text-lg'>
+            <span className='text-slate-400'>by </span>
+            underground
+          </p>
+        </div>
+        <div className='flex h-full max-h-16 w-full justify-between divide-x divide-slate-200 text-center'>
+          <button className='flex flex-1 flex-row items-center justify-center gap-2 p-2'>
+            <span className='text-slate-400'>0</span>
+            <div className='rounded-full bg-green-300 p-1'>
+              <HandThumbUpIcon className='h-4 w-4 text-white' />
+            </div>
+          </button>
+          <button className='flex flex-1 flex-row items-center justify-center gap-2 p-2'>
+            <div className='rounded-full bg-slate-300 p-1'>
+              <ArrowPathIcon className='h-4 w-4 text-white' />
+            </div>
+            <span className='text-slate-400'>0</span>
+          </button>
+        </div>
       </div>
     </div>
   );

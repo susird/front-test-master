@@ -3,7 +3,7 @@ import { SearchBar } from '../SearchBar/SearchBar';
 
 export const Header: React.FC = () => {
   return (
-    <header className='flex justify-around px-2 py-9  items-center'>
+    <header className='bg-white flex justify-between items-center w-full p-8'>
       <Logo />
       <SearchBar />
     </header>
