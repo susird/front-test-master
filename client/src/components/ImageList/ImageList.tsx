@@ -14,7 +14,7 @@ export const ImageList: React.FC = () => {
         title={''}
         id={''}
         author={''}
-        likesCount={0}
+        likesCount={3457}
         liked={false}
       />
       <ImageCard
@@ -40,8 +40,8 @@ export const ImageList: React.FC = () => {
         imageUrl={'https://picsum.photos/id/100/300'}
         title={''}
         id={''}
-        author={''}
-        likesCount={0}
+        author={'undergold'}
+        likesCount={1}
         liked={false}
       />
       <ImageCard
@@ -50,7 +50,7 @@ export const ImageList: React.FC = () => {
         title={''}
         id={''}
         author={''}
-        likesCount={0}
+        likesCount={1}
         liked={false}
       />
     </div>

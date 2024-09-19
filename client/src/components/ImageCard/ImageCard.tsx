@@ -35,12 +35,12 @@ export const ImageCard: React.FC<ImageCardProps> = ({
           <h1>COLLECTION</h1>
           <p className='md:text-lg'>
             <span className='text-slate-400'>by </span>
-            underground
+            {author}
           </p>
         </div>
         <div className='flex h-full max-h-16 w-full justify-between divide-x divide-slate-200 text-center'>
           <button className='flex flex-1 flex-row items-center justify-center gap-2 p-2'>
-            <span className='text-slate-400'>0</span>
+            <span className='text-slate-400'>{likesCount}</span>
             <div className='rounded-full bg-green-300 p-1'>
               <HandThumbUpIcon className='h-4 w-4 text-white' />
             </div>
