@@ -9,6 +9,7 @@ type ImageCardProps = {
   author: string;
   likesCount: number;
   liked: boolean;
+  price: number;
 };
 
 export const ImageCard: React.FC<ImageCardProps> = ({
@@ -18,15 +19,16 @@ export const ImageCard: React.FC<ImageCardProps> = ({
   author,
   likesCount,
   liked,
+  price,
 }) => {
   return (
-    <div className='relative flex max-h-[520px] flex-col overflow-hidden bg-white'>
-      <PriceTag />
+    <div className='relative flex max-h-[520px] flex-col overflow-hidden border border-b-0 border-solid border-slate-200 bg-white'>
+      <PriceTag price={price} />
       <img
         id={id}
         src={imageUrl}
         alt={title}
-        className='h-full max-h-80 w-full border border-b-0 border-solid border-slate-200 object-cover'
+        className='h-full max-h-80 w-full object-cover'
       />
       <div className='flex flex-col divide-y border border-solid border-slate-200'>
         <div className='flex h-full max-h-24 w-full flex-col items-center p-4'>
