@@ -32,7 +32,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
       />
       <div className='flex flex-col divide-y border border-solid border-slate-200'>
         <div className='flex h-full max-h-24 w-full flex-col items-center p-4'>
-          <h1>COLLECTION</h1>
+          <h1>{title}</h1>
           <p className='md:text-lg'>
             <span className='text-slate-400'>by </span>
             {author}
@@ -49,7 +49,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
             <div className='rounded-full bg-slate-300 p-1'>
               <ArrowPathIcon className='h-4 w-4 text-white' />
             </div>
-            <span className='text-slate-400'>0</span>
+            <span className='text-slate-400'>{liked}</span>
           </button>
         </div>
       </div>
