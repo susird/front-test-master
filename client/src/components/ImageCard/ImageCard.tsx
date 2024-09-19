@@ -1,5 +1,6 @@
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { HandThumbUpIcon } from '@heroicons/react/24/solid';
+import { PriceTag } from '../PriceTag/PriceTag';
 
 type ImageCardProps = {
   imageUrl: string;
@@ -19,7 +20,8 @@ export const ImageCard: React.FC<ImageCardProps> = ({
   liked,
 }) => {
   return (
-    <div className='flex max-h-[520px] flex-col bg-white'>
+    <div className='relative flex max-h-[520px] flex-col overflow-hidden bg-white'>
+      <PriceTag />
       <img
         id={id}
         src={imageUrl}
