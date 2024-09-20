@@ -2,17 +2,17 @@
 
 ## Technical Choices
 
-- React: I chose React for its efficient and declarative approach to building user interfaces. Its component-based architecture allows for reusable code, making it easy to manage and scale the application. With React, I can create interactive UIs that respond seamlessly to user inputs, enhancing the overall user experience.
+- React: I chose React because it is great for building dynamic user interfaces. Its component-based structure makes it easy to organize code and reuse components, which is very helpful as the project expands.
 
-- TypeScript: I decided to use TypeScript to introduce static typing to the project. This helps catch errors during development rather than at runtime, improving code quality. TypeScript also enhances code readability and maintainability, making it easier for other developers (or future me!) to understand the structure and flow of the application.
+- TypeScript: Using TypeScript adds type safety to JavaScript, helping to catch errors early in the development stage. This choice helps to have code quality and makes it easier to understand how different parts of the application interact.
 
-- Tailwind CSS: For styling, I opted for Tailwind CSS due to its utility-first approach, which allows for rapid design without leaving the HTML. This framework promotes a clean separation of concerns, enabling me to apply styles directly within my components while keeping my styles organized and easy to adjust. The responsive design utilities in Tailwind made it straightforward to create a mobile-friendly layout.
+- Tailwind CSS: I opted for Tailwind CSS due to its utility-first approach, which allows for quick styling of components. It helps create modern and responsive designs without needing to write extensive custom CSS.
 
-- Axios: I selected Axios for handling HTTP requests because of its user-friendly API and built-in support for promises. Axios simplifies the process of making requests and handling responses, allowing for clearer and more concise code. Its features, like interceptors and automatic JSON data transformation, make it a versatile choice for API interactions.
+- Axios: I used Axios for handling HTTP requests because it simplifies the process of fetching data from APIs. Its promise-based structure works well with async/await, keeping the code clean and readable.
 
-- Jest: I chose Jest as the testing framework because it integrates seamlessly with React and provides a rich set of features, including snapshot testing, mocking capabilities, and a simple API for writing tests. Jest helps ensure the reliability of the codebase and allows for easy identification of bugs, which is crucial during the development process.
+- Jest: I chose Jest for testing as it provides a straightforward way to ensure the components function correctly. The ability to write snapshot tests is particularly useful for maintaining UI consistency.
 
-- React Testing Library: To complement Jest, I utilized React Testing Library for testing React components. This library encourages testing from the user’s perspective, promoting best practices in testing by focusing on how components behave in the application rather than their implementation details. It helps ensure that the components work as intended in real-world scenarios.
+These technologies were selected to create an efficient development experience while ensuring the application remains robust and user-friendly.
 
 ## Features
 
