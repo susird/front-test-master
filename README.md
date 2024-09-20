@@ -1,8 +1,12 @@
 # Image Gallery Application
 
-## Overview
+## Technical Choices
 
-This project is a technical assessment. It is built using React, TypeScript, and Tailwind CSS. The application displays a gallery of images with infinite scroll functionality, allowing users to seamlessly load more images as they scroll down. The images are served from a mock server, simulating a real API.
+- I decided to use React for its component-based architecture, which makes it easy to build and maintain user interfaces.
+- TypeScript was a natural choice to add type safety, helping to catch errors early and improve code readability.
+- I opted for Tailwind CSS for styling because its utility-first approach allows for rapid development and keeps styles organized.
+- Axios is used for making HTTP requests due to its simplicity and promise-based structure, making it easy to handle responses and errors.
+- Jest is chosen for testing, providing a robust framework to ensure code quality and functionality.
 
 ## Features
 
@@ -10,14 +14,6 @@ This project is a technical assessment. It is built using React, TypeScript, and
 - Image Gallery: Displays images with details like title, author, price, and a like feature.
 - Search Functionality: Allows users to search for images.
 - Responsive Design: Optimized for both desktop and mobile screens.
-
-## Technologies Used
-
-- **React**: JavaScript library for building user interfaces. It’s super popular and makes building interactive UIs easier. The component-based architecture allows me to create reusable components, which I find very efficient.
-- **TypeScript**: A superset of JavaScript that adds static types. Using TypeScript adds type safety to JavaScript. This helps catch errors early in the development process and makes the code easier to read and maintain.
-- **Tailwind CSS**: A CSS framework for creating modern and responsive designs. It allows me to style components quickly without having to leave my HTML. Allows the project to keep styles organized and consistent.
-- **Axios**: A promise-based HTTP client for making requests. It’s a reliable HTTP client for making API requests. It has a simple API and makes handling responses and errors straightforward.
-- **Jest**: A testing framework to ensure code quality. It’s a powerful framework that integrates well with React. It helps ensure that my code works as expected and gives me confidence in my changes.
 
 ## Project Structure
 
@@ -49,25 +45,30 @@ This project is a technical assessment. It is built using React, TypeScript, and
 └── package.json
 ```
 
-# Installation
+## Setup
 
-## Prerequisites
+To run the project locally, follow these steps:
 
-- Node.js
-- npm or yarn (or pnpm)
+1. Clone the repository.
+2. Install the dependencies using npm install.
+3. Start the development server with npm start.
 
-git clone https://github.com/susird/front-test-master.git
+## Pages
 
-pnpm install or npm install or yarn install
+### Image Gallery
 
-# Running App
+The main page displays a gallery of images fetched from the mock server. Users can scroll through the images, and as they reach the end of the list, more images are loaded automatically.
 
-pnpm run dev or npm run dev or yarn run dev
+### Search Functionality
 
-# Testing
+A search bar is included to allow users to filter images based on their queries, enhancing the overall experience.
 
-pnpm test
+### Responsive Design
 
-# Conclusions
+The application is fully responsive, ensuring usability across various devices.
 
-This project demonstrates my skills in building responsive web applications using modern technologies. The implementation of infinite scroll and the use of a mock server for images enhances the user experience.
+## Going Further
+
+- In a real application, I would implement proper authentication and security measures.
+- Additional features like user accounts and image uploads could be added for a more comprehensive solution.
+- For larger projects, a state management library could be considered for handling complex state logic.
