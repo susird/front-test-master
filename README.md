@@ -2,11 +2,17 @@
 
 ## Technical Choices
 
-- I decided to use React for its component-based architecture, which makes it easy to build and maintain user interfaces.
-- TypeScript was a natural choice to add type safety, helping to catch errors early and improve code readability.
-- I opted for Tailwind CSS for styling because its utility-first approach allows for rapid development and keeps styles organized.
-- Axios is used for making HTTP requests due to its simplicity and promise-based structure, making it easy to handle responses and errors.
-- Jest is chosen for testing, providing a robust framework to ensure code quality and functionality.
+- React: I chose React for its efficient and declarative approach to building user interfaces. Its component-based architecture allows for reusable code, making it easy to manage and scale the application. With React, I can create interactive UIs that respond seamlessly to user inputs, enhancing the overall user experience.
+
+- TypeScript: I decided to use TypeScript to introduce static typing to the project. This helps catch errors during development rather than at runtime, improving code quality. TypeScript also enhances code readability and maintainability, making it easier for other developers (or future me!) to understand the structure and flow of the application.
+
+- Tailwind CSS: For styling, I opted for Tailwind CSS due to its utility-first approach, which allows for rapid design without leaving the HTML. This framework promotes a clean separation of concerns, enabling me to apply styles directly within my components while keeping my styles organized and easy to adjust. The responsive design utilities in Tailwind made it straightforward to create a mobile-friendly layout.
+
+- Axios: I selected Axios for handling HTTP requests because of its user-friendly API and built-in support for promises. Axios simplifies the process of making requests and handling responses, allowing for clearer and more concise code. Its features, like interceptors and automatic JSON data transformation, make it a versatile choice for API interactions.
+
+- Jest: I chose Jest as the testing framework because it integrates seamlessly with React and provides a rich set of features, including snapshot testing, mocking capabilities, and a simple API for writing tests. Jest helps ensure the reliability of the codebase and allows for easy identification of bugs, which is crucial during the development process.
+
+- React Testing Library: To complement Jest, I utilized React Testing Library for testing React components. This library encourages testing from the user’s perspective, promoting best practices in testing by focusing on how components behave in the application rather than their implementation details. It helps ensure that the components work as intended in real-world scenarios.
 
 ## Features
 
