@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a technical assessment for a frontend developer position. It is built using React, TypeScript, and Tailwind CSS. The application displays a gallery of images with infinite scroll functionality, allowing users to seamlessly load more images as they scroll down. The images are served from a mock server, simulating a real API.
+This project is a technical assessment. It is built using React, TypeScript, and Tailwind CSS. The application displays a gallery of images with infinite scroll functionality, allowing users to seamlessly load more images as they scroll down. The images are served from a mock server, simulating a real API.
 
 ## Features
 
