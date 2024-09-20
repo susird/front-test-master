@@ -56,13 +56,13 @@ This project is a technical assessment for a frontend developer position. It is 
 - Node.js
 - npm or yarn (or pnpm)
 
-git clone <repository-url>
-cd project-name
-pnpm install
+git clone https://github.com/susird/front-test-master.git
+
+pnpm install or npm install or yarn install
 
 # Running App
 
-pnpm run dev
+pnpm run dev or npm run dev or yarn run dev
 
 # Testing
 
