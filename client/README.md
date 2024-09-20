@@ -47,12 +47,12 @@ This project is a technical assessment for a frontend developer position. It is 
 │   └── services
 │       └── getImages.test.ts
 └── package.json
-
-
+```
 
 # Installation
 
 ## Prerequisites
+
 - Node.js
 - npm or yarn (or pnpm)
 
@@ -61,8 +61,13 @@ cd project-name
 pnpm install
 
 # Running App
+
 pnpm run dev
 
 # Testing
+
 pnpm test
-```
+
+# Conclusions
+
+This project demonstrates my skills in building responsive web applications using modern technologies. The implementation of infinite scroll and the use of a mock server for images enhances the user experience.
