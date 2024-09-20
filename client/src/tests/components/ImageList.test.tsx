@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { ImageList } from './ImageList';
+import { ImageList } from '../../components/ImageList/ImageList';
 import { getImages } from '../../services/imageService';
 
 jest.mock('../../services/imageService');

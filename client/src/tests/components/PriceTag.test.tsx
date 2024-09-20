@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { PriceTag } from './PriceTag';
+import { PriceTag } from '../../components/PriceTag/PriceTag';
 
 describe('PriceTag Component', () => {
   test('renders the price with default currency', () => {

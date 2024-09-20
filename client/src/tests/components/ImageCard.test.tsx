@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { ImageCard } from './ImageCard';
+import { ImageCard } from '../../components/ImageCard/ImageCard';
 
 describe('ImageCard Component', () => {
   const mockProps = {

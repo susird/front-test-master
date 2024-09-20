@@ -13,11 +13,11 @@ This project is a technical assessment for a frontend developer position. It is 
 
 ## Technologies Used
 
-- **React**: JavaScript library for building user interfaces.
-- **TypeScript**: A superset of JavaScript that adds static types.
-- **Tailwind CSS**: A CSS framework for creating modern and responsive designs.
-- **Axios**: A promise-based HTTP client for making requests.
-- **Jest**: A testing framework to ensure code quality.
+- **React**: JavaScript library for building user interfaces. It’s super popular and makes building interactive UIs easier. The component-based architecture allows me to create reusable components, which I find very efficient.
+- **TypeScript**: A superset of JavaScript that adds static types. Using TypeScript adds type safety to JavaScript. This helps catch errors early in the development process and makes the code easier to read and maintain.
+- **Tailwind CSS**: A CSS framework for creating modern and responsive designs. It allows me to style components quickly without having to leave my HTML. Allows the project to keep styles organized and consistent.
+- **Axios**: A promise-based HTTP client for making requests. It’s a reliable HTTP client for making API requests. It has a simple API and makes handling responses and errors straightforward.
+- **Jest**: A testing framework to ensure code quality. It’s a powerful framework that integrates well with React. It helps ensure that my code works as expected and gives me confidence in my changes.
 
 ## Project Structure
 
@@ -32,20 +32,20 @@ This project is a technical assessment for a frontend developer position. It is 
 │   │   └── SearchBar
 │   ├── services
 │   │   └── apiClient.ts
+│   ├── tests
+│   │   ├── components
+│   │   │   ├── Header.test.tsx
+│   │   │   ├── ImageCard.test.tsx
+│   │   │   ├── ImageList.test.tsx
+│   │   │   ├── Logo.test.tsx
+│   │   │   ├── PriceTag.test.tsx
+│   │   │   └── SearchBar.test.tsx
+│   │   └── services
+│   │       └── getImages.test.ts
 │   ├── App.tsx
 │   └── index.tsx
 ├── public
 │   └── assets
-├── tests
-│   ├── components
-│   │   ├── Header.test.tsx
-│   │   ├── ImageCard.test.tsx
-│   │   ├── ImageList.test.tsx
-│   │   ├── Logo.test.tsx
-│   │   ├── PriceTag.test.tsx
-│   │   └── SearchBar.test.tsx
-│   └── services
-│       └── getImages.test.ts
 └── package.json
 ```
 
