@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='flex h-screen flex-col bg-slate-100'>
       <>
-        <Header />
+        <Header onSearch={() => {}} />
         <main className='flex w-full justify-center bg-slate-100'>
           <ImageList />
         </main>
