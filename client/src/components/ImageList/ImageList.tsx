@@ -60,6 +60,7 @@ export const ImageList: React.FC = () => {
       {images.map((image) => {
         return (
           <ImageCard
+            key={image.id}
             imageUrl={image.main_attachment.big}
             title={image.title.toUpperCase()}
             id={image.id.toString()}
