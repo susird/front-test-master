@@ -1,73 +1,73 @@
-# Requerimientos
+# Image Gallery Application
 
-Necesitamos desarrollar una Single Page Application (SPA) que muestre la información de nuestras imagenes:
-  1. Mostrar todas las imagenes con un scroll infinito.
-  2. Filtrar el contenido a través de una búsqueda (No es necesario que el resultado sea coherente).
-  3. Realizar un like/unlike de cada uno de los items. UI responsive.
+## Overview
 
-# Información
+This project is a technical assessment for a frontend developer position. It is built using React, TypeScript, and Tailwind CSS. The application displays a gallery of images with infinite scroll functionality, allowing users to seamlessly load more images as they scroll down. The images are served from a mock server, simulating a real API.
 
-En el momento del desarrollo de la aplicación cliente, el API no se encuentra desarrollada, por
-lo que esta incluida una api mock que simula el comportamiento de la API.
+## Features
 
-Para arrancar la api mock simplemente ejecutar:
+- Infinite Scroll: Automatically loads more images as the user scrolls.
+- Image Gallery: Displays images with details like title, author, price, and a like feature.
+- Search Functionality: Allows users to search for images.
+- Responsive Design: Optimized for both desktop and mobile screens.
 
-`npm run mocks`
+## Technologies Used
 
-## Endpoints
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **Tailwind CSS**: A CSS framework for creating modern and responsive designs.
+- **Axios**: A promise-based HTTP client for making requests.
+- **Jest**: A testing framework to ensure code quality.
 
-### `GET http://localhost:3100/images`
-```json
-[
-  {
-    "type": "Image",
-    "id": 2,
-    "title": "Train in India-Agra",
-    "author": "SamyRoad",
-    "created_at": "2012-12-12T21: 08: 20Z",
-    "main_attachment": {
-      "big": "http://lorempixel.com/400/500/",
-      "small": "http://lorempixel.com/100/125/"
-    },
-    "likes_count": 5,
-    "liked": true,
-    "links": [
-      {
-        "rel": "avatar",
-        "uri": "http://lorempixel.com/250/250/",
-        "methods": "GET"
-      },
-      {
-        "rel": "like",
-        "uri": "http://localhost:3100/images/2/likes",
-        "methods": "POST"
-      }
-    ]
-  },
-  ...
-]
+## Project Structure
+
+```plaintext
+├── src
+│   ├── components
+│   │   ├── Header
+│   │   ├── ImageCard
+│   │   ├── ImageList
+│   │   ├── Logo
+│   │   ├── PriceTag
+│   │   └── SearchBar
+│   ├── services
+│   │   └── apiClient.ts
+│   ├── App.tsx
+│   └── index.tsx
+├── public
+│   └── assets
+├── tests
+│   ├── components
+│   │   ├── Header.test.tsx
+│   │   ├── ImageCard.test.tsx
+│   │   ├── ImageList.test.tsx
+│   │   ├── Logo.test.tsx
+│   │   ├── PriceTag.test.tsx
+│   │   └── SearchBar.test.tsx
+│   └── services
+│       └── getImages.test.ts
+└── package.json
 ```
 
-Se puede utilizar los query params `search` y `page` para simular la busqueda y paginación.
+# Installation
 
+## Prerequisites
 
-### `POST http://localhost:3100/images/:id/likes`
+- Node.js
+- npm or yarn (or pnpm)
 
-Espera un body vacio y respondera con un 204 si todo ha ido correctamente, simula la acción de like.
+git clone <repository-url>
+cd project-name
+pnpm install
 
-# Diseño
+# Running App
 
-La visualización de la aplicación cambia dependiendo del dispositivo que se este utilizando.
-- En el caso de que se utilice un dispositivo móvil, se debe de mostrar la aplicación siguiendo el diseño mobile.psd.
-- En el caso que se utilice una pantalla mayor, se debe de utilizar el diseño web.psd, con un mínimo de 2 columnas y un máximo de 4.
+pnpm run dev
 
-Los diseños se pueden encontrar [aqui](https://www.dropbox.com/sh/r1fp5nz7x046kjt/AACQdbp6bZlv2pNtCN2lTEoEa?dl=0).
+# Testing
 
-Si no dispones de photoshop puedes usar [photopea](https://www.photopea.com/).
+pnpm test
 
-# Implementación
+# Conclusions
 
-- Diseñar e implementar la aplicación usando preferiblemente React.
-- HTML y estilos responsive a partir de los PSDs: mobile para móviles y web para Desktop.
-
-Se valorarán el uso e implementación de tests.
+This project demonstrates my skills in building responsive web applications using modern technologies. The implementation of infinite scroll and the use of a mock server for images enhances the user experience.
