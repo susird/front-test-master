@@ -73,8 +73,3 @@ A search bar is included to allow users to filter images based on their queries,
 
 The application is fully responsive, ensuring usability across various devices.
 
-## Going Further
-
-- In a real application, I would implement proper authentication and security measures.
-- Additional features like user accounts and image uploads could be added for a more comprehensive solution.
-- For larger projects, a state management library could be considered for handling complex state logic.
