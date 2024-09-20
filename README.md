@@ -33,17 +33,7 @@ These technologies were selected to create an efficient development experience w
 │   │   ├── PriceTag
 │   │   └── SearchBar
 │   ├── services
-│   │   └── apiClient.ts
-│   ├── tests
-│   │   ├── components
-│   │   │   ├── Header.test.tsx
-│   │   │   ├── ImageCard.test.tsx
-│   │   │   ├── ImageList.test.tsx
-│   │   │   ├── Logo.test.tsx
-│   │   │   ├── PriceTag.test.tsx
-│   │   │   └── SearchBar.test.tsx
-│   │   └── services
-│   │       └── getImages.test.ts
+│   │   └──imageService.ts
 │   ├── App.tsx
 │   └── index.tsx
 ├── public
