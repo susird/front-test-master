@@ -1,50 +1,68 @@
-# React + TypeScript + Vite
+# Image Gallery Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a technical assessment for a frontend developer position. It is built using React, TypeScript, and Tailwind CSS. The application displays a gallery of images with infinite scroll functionality, allowing users to seamlessly load more images as they scroll down. The images are served from a mock server, simulating a real API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Infinite Scroll: Automatically loads more images as the user scrolls.
+- Image Gallery: Displays images with details like title, author, price, and a like feature.
+- Search Functionality: Allows users to search for images.
+- Responsive Design: Optimized for both desktop and mobile screens.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **Tailwind CSS**: A CSS framework for creating modern and responsive designs.
+- **Axios**: A promise-based HTTP client for making requests.
+- **Jest**: A testing framework to ensure code quality.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Project Structure
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+```plaintext
+├── src
+│   ├── components
+│   │   ├── Header
+│   │   ├── ImageCard
+│   │   ├── ImageList
+│   │   ├── Logo
+│   │   ├── PriceTag
+│   │   └── SearchBar
+│   ├── services
+│   │   └── apiClient.ts
+│   ├── App.tsx
+│   └── index.tsx
+├── public
+│   └── assets
+├── tests
+│   ├── components
+│   │   ├── Header.test.tsx
+│   │   ├── ImageCard.test.tsx
+│   │   ├── ImageList.test.tsx
+│   │   ├── Logo.test.tsx
+│   │   ├── PriceTag.test.tsx
+│   │   └── SearchBar.test.tsx
+│   └── services
+│       └── getImages.test.ts
+└── package.json
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+
+# Installation
+
+## Prerequisites
+- Node.js
+- npm or yarn (or pnpm)
+
+git clone <repository-url>
+cd project-name
+pnpm install
+
+# Running App
+pnpm run dev
+
+# Testing
+pnpm test
 ```
