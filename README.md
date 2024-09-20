@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a technical assessment for a frontend developer position. It is built using React, TypeScript, and Tailwind CSS. The application displays a gallery of images with infinite scroll functionality, allowing users to seamlessly load more images as they scroll down. The images are served from a mock server, simulating a real API.
+This project is a technical assessment. It is built using React, TypeScript, and Tailwind CSS. The application displays a gallery of images with infinite scroll functionality, allowing users to seamlessly load more images as they scroll down. The images are served from a mock server, simulating a real API.
 
 ## Features
 
@@ -56,13 +56,13 @@ This project is a technical assessment for a frontend developer position. It is 
 - Node.js
 - npm or yarn (or pnpm)
 
-git clone <repository-url>
-cd project-name
-pnpm install
+git clone https://github.com/susird/front-test-master.git
+
+pnpm install or npm install or yarn install
 
 # Running App
 
-pnpm run dev
+pnpm run dev or npm run dev or yarn run dev
 
 # Testing
 
