@@ -14,6 +14,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   useEffect(() => {
+    if (searchTerm) return;
     const handleScroll = async () => {
       const { scrollTop, scrollHeight, clientHeight } =
         document.documentElement;
@@ -25,7 +26,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [loading, setPage]);
+  }, [loading, setPage, searchTerm]);
 
   useEffect(() => {
     if (!searchTerm) {

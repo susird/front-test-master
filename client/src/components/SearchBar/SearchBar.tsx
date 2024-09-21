@@ -9,6 +9,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ setSearchTerm }) => {
     setSearchTerm(query);
   };
 
+
   return (
     <div className='relative w-full max-w-52 rounded-2xl bg-slate-200 py-2 md:max-w-60'>
       <MagnifyingGlassIcon
