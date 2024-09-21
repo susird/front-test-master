@@ -1,6 +1,8 @@
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { HandThumbUpIcon } from '@heroicons/react/24/solid';
 import { PriceTag } from '../PriceTag/PriceTag';
+import { likeImage, SUCCESS_STATUS } from '../../services/imageService';
+import { useState } from 'react';
 
 type ImageCardProps = {
   imageUrl: string;
@@ -9,7 +11,7 @@ type ImageCardProps = {
   likesCount: number;
   liked: boolean;
   price: number;
-  onLike: () => void;
+  id: number;
 };
 
 export const ImageCard: React.FC<ImageCardProps> = ({
@@ -19,8 +21,16 @@ export const ImageCard: React.FC<ImageCardProps> = ({
   likesCount,
   liked,
   price,
-  onLike,
+  id,
 }) => {
+  const [likes, setLikes] = useState(likesCount);
+  const handleLike = async () => {
+    const response = await likeImage(id);
+    if (response.status === SUCCESS_STATUS) {
+      setLikes((previous) => previous + 1);
+    }
+  };
+
   return (
     <div className='relative flex max-h-[520px] flex-col overflow-hidden border border-b-0 border-solid border-slate-200 bg-white'>
       <PriceTag price={price} />
@@ -39,12 +49,10 @@ export const ImageCard: React.FC<ImageCardProps> = ({
         </div>
         <div className='flex h-full max-h-16 w-full justify-between divide-x divide-slate-200 text-center'>
           <button
-            onClick={onLike}
+            onClick={handleLike}
             className='flex flex-1 flex-row items-center justify-center gap-2 p-2'
           >
-            <span className='text-slate-400'>
-              {liked ? 'Unlike' : 'Like'} ({likesCount})
-            </span>
+            <span className='text-slate-400'>{likes}</span>
             <div className='rounded-full bg-green-300 p-1'>
               <HandThumbUpIcon className='h-4 w-4 text-white' />
             </div>

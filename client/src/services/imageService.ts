@@ -30,3 +30,15 @@ export const getImages = async (page: number): Promise<Image[]> => {
     throw error;
   }
 };
+
+export const likeImage = async (id: number) => {
+  try {
+    const response = await apiClient.post(`/images/${id}/likes`);
+    return response;
+  } catch (error) {
+    console.log('Error liking image', error);
+    throw error;
+  }
+};
+
+export const SUCCESS_STATUS = 204;

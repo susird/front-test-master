@@ -26,7 +26,7 @@ export const ImageList: React.FC<ImageListProps> = ({
             likesCount={image.likes_count}
             liked={image.liked}
             price={image.price}
-            onLike={() => {}}
+            id={image.id}
           />
         );
       })}
