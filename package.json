@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install-all": "pnpm run install:client && pnpm run install:mock-server",
+    "install-all": "pnpm install && pnpm run install:client && pnpm run install:mock-server",
     "start": "concurrently \"pnpm run start:mock-server\" \"pnpm run start:client\"",
     "start:mock-server": "cd mock-server && pnpm run mocks",
     "start:client": "cd client && pnpm run dev",

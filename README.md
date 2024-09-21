@@ -71,6 +71,8 @@ pnpm run install-all
 pnpm run start
 ```
 
+- 👩🏻‍💻 Go to http://localhost:5173/
+
 ## Features 🧾
 
 - 🖼 Image Gallery
@@ -84,12 +86,11 @@ A search bar is included to allow users to filter images based on the title and 
 - 📱 Responsive Design
 
 The application is fully responsive, ensuring usability across various devices.
-ytg
 
 ## Wall of shame: Things I didn't have to implement or I would like to improve 🫣
 
 - Better thinking about the architecture to avoid the use of so many useEffects.
-- Image responsiveness using srcset attribute to display the apropiate images depending on the device.
+- Image responsiveness using srcset attribute to display the apropiate images depending on the screensize and resolutions.
 - Implementation of the infinite scrolling using the Intersection Observer API.
 - More exhaustive tests to increase the coverage.
 
