@@ -5,7 +5,6 @@ import { PriceTag } from '../PriceTag/PriceTag';
 type ImageCardProps = {
   imageUrl: string;
   title: string;
-  id: string;
   author: string;
   likesCount: number;
   liked: boolean;
@@ -16,7 +15,6 @@ type ImageCardProps = {
 export const ImageCard: React.FC<ImageCardProps> = ({
   imageUrl,
   title,
-  id,
   author,
   likesCount,
   liked,
@@ -27,7 +25,6 @@ export const ImageCard: React.FC<ImageCardProps> = ({
     <div className='relative flex max-h-[520px] flex-col overflow-hidden border border-b-0 border-solid border-slate-200 bg-white'>
       <PriceTag price={price} />
       <img
-        id={id}
         src={imageUrl}
         alt={title}
         className='h-full max-h-80 w-full object-cover'

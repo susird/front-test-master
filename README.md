@@ -12,7 +12,11 @@
 
 - Jest: I chose Jest for testing as it provides a straightforward way to ensure the components function correctly. The ability to write snapshot tests is particularly useful for maintaining UI consistency.
 
-These technologies were selected to create an efficient development experience while ensuring the application remains robust and user-friendly.
+- Infinite scroll: I've implemented infinite scroll but since the pagination is not implemented in the backend the list of images is repeating
+
+- I decided to use axios because I'm familiar whit it and the API is straightforward to use for a technical chagenge. However, since it doesn't have UI state management based on network operations I had to implement the loading state manually using React Hooks which at the end wasn't necessarily a good decision because I had to use to ignore to avoid errors in array dependency.
+
+- Decidi usar una libreria llamada debounce, ya que es mas liviana que loadash que es la que normalmente se usa, porque a pesar de que la funcion es muy sencilla los tipos son muy complejos y requeririan mucho tiempo
 
 ## Features
 
@@ -62,4 +66,3 @@ A search bar is included to allow users to filter images based on their queries,
 ### Responsive Design
 
 The application is fully responsive, ensuring usability across various devices.
-

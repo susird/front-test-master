@@ -1,6 +1,14 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
+type SearchBarProps = {
+  setSearchTerm: (searchTerm: string) => void;
+};
 
-export const SearchBar: React.FC = () => {
+export const SearchBar: React.FC<SearchBarProps> = ({ setSearchTerm }) => {
+  const handleSearch = (query: string) => {
+    // TODO: debounce
+    setSearchTerm(query);
+  };
+
   return (
     <div className='relative w-full max-w-52 rounded-2xl bg-slate-200 py-2 md:max-w-60'>
       <MagnifyingGlassIcon
@@ -11,7 +19,7 @@ export const SearchBar: React.FC = () => {
         type='text'
         placeholder="You're looking for something?"
         className='flex w-full bg-transparent pl-8 text-xs md:text-sm'
-        onChange={() => {}}
+        onChange={(e) => handleSearch(e.target.value)}
       />
     </div>
   );
