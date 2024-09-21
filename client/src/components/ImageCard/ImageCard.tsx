@@ -1,7 +1,7 @@
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { HandThumbUpIcon } from '@heroicons/react/24/solid';
 import { PriceTag } from '../PriceTag/PriceTag';
-import { likeImage, SUCCESS_STATUS } from '../../services/imageService';
+import { likeImage } from '../../services/imageService';
 import { useState } from 'react';
 
 type ImageCardProps = {
@@ -9,7 +9,6 @@ type ImageCardProps = {
   title: string;
   author: string;
   likesCount: number;
-  liked: boolean;
   price: number;
   id: number;
 };
@@ -19,16 +18,13 @@ export const ImageCard: React.FC<ImageCardProps> = ({
   title,
   author,
   likesCount,
-  liked,
   price,
   id,
 }) => {
   const [likes, setLikes] = useState(likesCount);
   const handleLike = async () => {
-    const response = await likeImage(id);
-    if (response.status === SUCCESS_STATUS) {
-      setLikes((previous) => previous + 1);
-    }
+    setLikes((previous) => previous + 1);
+    await likeImage(id);
   };
 
   return (
@@ -61,7 +57,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
             <div className='rounded-full bg-slate-300 p-1'>
               <ArrowPathIcon className='h-4 w-4 text-white' />
             </div>
-            <span className='text-slate-400'>{likesCount}</span>
+            <span className='text-slate-400'>0</span>
           </button>
         </div>
       </div>

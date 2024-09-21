@@ -5,16 +5,13 @@ describe('ImageCard Component', () => {
   const mockProps = {
     imageUrl: 'http://example.com/image.jpg',
     title: 'Test Image',
-    id: '1',
     author: 'John Doe',
     likesCount: 10,
-    liked: false,
     price: 100.0,
-    onLike: jest.fn(),
   };
 
   test('renders ImageCard with correct props', () => {
-    render(<ImageCard {...mockProps} />);
+    render(<ImageCard id={0} {...mockProps} />);
 
     const image = screen.getByAltText(mockProps.title);
     expect(image).toHaveAttribute('src', mockProps.imageUrl);
@@ -24,15 +21,15 @@ describe('ImageCard Component', () => {
 
     expect(screen.getByText('100.00')).toBeInTheDocument();
 
-    expect(screen.getByText(/like \(10\)/i)).toBeInTheDocument();
+    expect(screen.getByText(10)).toBeInTheDocument();
   });
 
   test('calls onLike when Like button is clicked', () => {
-    render(<ImageCard {...mockProps} />);
+    render(<ImageCard id={0} {...mockProps} />);
 
-    const likeButton = screen.getByText(/like \(10\)/i);
+    const likeButton = screen.getByRole('button', { name: /10/i });
     fireEvent.click(likeButton);
 
-    expect(mockProps.onLike).toHaveBeenCalledTimes(1);
+    expect(likeButton).toHaveTextContent('11');
   });
 });

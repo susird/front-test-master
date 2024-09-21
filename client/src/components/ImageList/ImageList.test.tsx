@@ -10,7 +10,6 @@ const mockImages = [
   {
     id: 1,
     title: 'Image 1',
-    liked: false,
     likes_count: 5,
     author: 'Author 1',
     price: 10,
@@ -20,7 +19,6 @@ const mockImages = [
   {
     id: 2,
     title: 'Image 2',
-    liked: false,
     likes_count: 3,
     author: 'Author 2',
     price: 20,
@@ -31,7 +29,7 @@ const mockImages = [
 
 test('renders the list of images', async () => {
   (getImages as jest.Mock).mockResolvedValue(mockImages);
-  render(<ImageList />);
+  render(<ImageList images={mockImages} error={null} loading={false} />);
 
   await waitFor(() => {
     expect(screen.getByText(/Image 1/i)).toBeInTheDocument();
@@ -42,7 +40,7 @@ test('renders the list of images', async () => {
 test('loads more images on scroll', async () => {
   (getImages as jest.Mock).mockResolvedValueOnce(mockImages);
 
-  render(<ImageList />);
+  render(<ImageList images={mockImages} error={null} loading={false} />);
 
   fireEvent.scroll(window, {
     target: { scrollY: document.documentElement.scrollHeight },

@@ -24,7 +24,6 @@ export const ImageList: React.FC<ImageListProps> = ({
             title={image.title.toUpperCase()}
             author={image.author}
             likesCount={image.likes_count}
-            liked={image.liked}
             price={image.price}
             id={image.id}
           />

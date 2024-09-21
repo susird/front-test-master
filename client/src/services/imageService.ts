@@ -3,7 +3,7 @@ import axios from 'axios';
 export interface Image {
   id: number;
   title: string;
-  liked: boolean;
+  liked?: boolean;
   price: number;
   likes_count: number;
   author: string;
@@ -40,5 +40,3 @@ export const likeImage = async (id: number) => {
     throw error;
   }
 };
-
-export const SUCCESS_STATUS = 204;
