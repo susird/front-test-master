@@ -61,7 +61,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({
             <div className='rounded-full bg-slate-300 p-1'>
               <ArrowPathIcon className='h-4 w-4 text-white' />
             </div>
-            <span className='text-slate-400'>{liked}</span>
+            <span className='text-slate-400'>{likesCount}</span>
           </button>
         </div>
       </div>
