@@ -1,14 +1,14 @@
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
+import debounce from 'debounce';
+
 type SearchBarProps = {
   setSearchTerm: (searchTerm: string) => void;
 };
 
 export const SearchBar: React.FC<SearchBarProps> = ({ setSearchTerm }) => {
-  const handleSearch = (query: string) => {
-    // TODO: debounce
+  const handleSearch = debounce((query: string) => {
     setSearchTerm(query);
-  };
-
+  }, 500);
 
   return (
     <div className='relative w-full max-w-52 rounded-2xl bg-slate-200 py-2 md:max-w-60'>

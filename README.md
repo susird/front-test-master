@@ -66,3 +66,7 @@ A search bar is included to allow users to filter images based on their queries,
 ### Responsive Design
 
 The application is fully responsive, ensuring usability across various devices.
+
+## Wall of shame: Things I didn't have to implement or I wold like to improve
+
+- Pensar mejor la arquitectura para evitar el uso de tantos useEffects
